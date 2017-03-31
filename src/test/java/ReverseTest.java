@@ -1,5 +1,7 @@
 import Odwracanie.*;
 
+import javax.sound.midi.Soundbank;
+
 /**
  * Created by mpietrewicz on 2017-03-31.
  */
@@ -29,8 +31,13 @@ public class ReverseTest {
         System.out.println("Przywrócone i zmienione:");
         for (Reversible r : revers) {
             r.reverse();
-            r.change();
-            System.out.println(r);
+            if(r.getClass().toString().equals("class Odwracanie.ReversibleString")) {
+                System.out.println("Tekst " + r);
+            }
+            else if(r.getClass().toString().equals("class Odwracanie.ReversibleDouble")) {
+                Double value = Double.parseDouble(r.toString());
+                System.out.println(value + 10);
+            }
         }
     }
 }
