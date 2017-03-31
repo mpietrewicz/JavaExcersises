@@ -7,4 +7,6 @@ public interface Reversible {
 
     Reversible reverse();
 
+    Reversible change();
+
 }

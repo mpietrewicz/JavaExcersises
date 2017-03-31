@@ -20,4 +20,9 @@ public class ReversibleDouble implements Reversible {
         this.number = 1/this.number;
         return this;
     }
+
+    public Reversible change() {
+        this.number = this.number+10;
+        return this;
+    }
 }

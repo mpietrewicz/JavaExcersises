@@ -19,4 +19,9 @@ public class ReversibleString implements Reversible {
         this.text = new StringBuffer(this.text).reverse().toString();
         return this;
     }
+
+    public Reversible change() {
+        this.text = "Tekst " + this.text;
+        return this;
+    }
 }
